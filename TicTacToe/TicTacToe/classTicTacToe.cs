@@ -9,9 +9,9 @@ namespace TicTacToe
     class classTicTacToe
     {
 
-        public tictactoe3x3()
-        {
+        //public tictactoe3x3()
+        //{
 
-        }
+        //}
     }
 }
