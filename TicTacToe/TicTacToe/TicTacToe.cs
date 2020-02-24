@@ -12,7 +12,7 @@ namespace TicTacToe
 {
     public partial class TicTacToe : Form
     {
-        public string joueur = "x";
+        classTicTacToe tourJoueur = new classTicTacToe("x");
         public TicTacToe()
         {
             InitializeComponent();
@@ -20,25 +20,15 @@ namespace TicTacToe
         public void tour(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            int numeroButton = int.Parse(button.Name.Substring(3));
-            if (joueur == "x")
-            {
-                button.Text = joueur;
-                button.Enabled = false;
-                joueur = "o";
-            }
-            else
-            {
-                button.Text = joueur;
-                joueur = "x";
-                button.Enabled = false;
-            }
+            int numeroButton = int.Parse(button.Name.Substring(3)); 
+            button.Text = tourJoueur.joueur;
+            tourJoueur.changerTour();
+            button.Enabled = false;
         }
         private void TicTacToe_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
-
         private void BtnReset_Click(object sender, EventArgs e)
         {
             
