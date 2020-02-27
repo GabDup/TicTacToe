@@ -19,11 +19,19 @@ namespace TicTacToe
         }
         public void tour(object sender, EventArgs e)
         {
+
             Button button = (Button)sender;
-            int numeroButton = int.Parse(button.Name.Substring(3)); 
+            int ligne = int.Parse(button.Name.Substring(3,1));
+            int colonne = int.Parse(button.Name.Substring(4, 1));
             button.Text = tourJoueur.joueur;
+            tourJoueur.jouer(ligne, colonne);
             tourJoueur.changerTour();
             button.Enabled = false;
+            if (tourJoueur.gagnant())
+            {
+                // afficher gagnant
+                // bloquer tous les cases
+            }
         }
         private void TicTacToe_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -32,6 +40,11 @@ namespace TicTacToe
         private void BtnReset_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void TicTacToe_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
