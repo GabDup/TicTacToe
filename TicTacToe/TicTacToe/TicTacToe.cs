@@ -27,10 +27,10 @@ namespace TicTacToe
             tourJoueur.jouer(ligne, colonne);
             tourJoueur.changerTour();
             button.Enabled = false;
-            if (tourJoueur.gagnant())
+            if (tourJoueur.gagnant() == true)
             {
-                // afficher gagnant
-                // bloquer tous les cases
+                MessageBox.Show(tourJoueur.joueur + " gagne");
+                
             }
         }
         private void TicTacToe_KeyPress(object sender, KeyPressEventArgs e)

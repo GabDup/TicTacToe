@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 533);
+            this.ClientSize = new System.Drawing.Size(856, 533);
             this.Controls.Add(this.grbTicTacToe3x3);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btn3x3);
