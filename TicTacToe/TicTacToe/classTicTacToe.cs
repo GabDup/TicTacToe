@@ -10,7 +10,7 @@ namespace TicTacToe
     public class classTicTacToe
     {
         public string joueur;
-        public string[,] tableauGagnant = new string [3,3];
+        public string[,] tableauJouer = new string [3,3];
 
         public classTicTacToe(string joueur)
         {
@@ -30,51 +30,43 @@ namespace TicTacToe
         }
         public void jouer(int ligne, int colonne)
         {
-            tableauGagnant[ligne, colonne] = joueur;
+            tableauJouer[ligne, colonne] = joueur;
         }
-        //public Boolean possibilitéesGagnant(int ligne, int colonne)
-        //{
-        //    do
-        //    {
-                
-        //    } while ();
-            
-        //}
-        public Boolean gagnant()
+        public Boolean trouverJoueurGagnant()
         {
-            for (int ligne = 0; ligne <= tableauGagnant.GetUpperBound(0); ligne++)
+            for (int ligne = 0; ligne <= tableauJouer.GetUpperBound(0); ligne++)
             {
-                for (int colonne = 0; colonne < tableauGagnant.GetUpperBound(1); colonne++)
+                for (int colonne = 0; colonne < tableauJouer.GetUpperBound(1); colonne++)
                 {
-                    if (joueur == tableauGagnant[0, 0] + tableauGagnant[0, 1] + tableauGagnant[0, 2])
+                    if (joueur == tableauJouer[0, 0] && joueur == tableauJouer[0, 1] && joueur == tableauJouer[0, 2])
                     {
                         return true;
                     }
-                    if (joueur == tableauGagnant[0, 0] + tableauGagnant[1, 0] + tableauGagnant[2, 0])
+                    if (joueur == tableauJouer[0, 0] && joueur == tableauJouer[1, 0] && joueur == tableauJouer[2, 0])
                     {
                         return true;
                     }
-                    if (joueur == tableauGagnant[0, 1] + tableauGagnant[1, 1] + tableauGagnant[2, 1])
+                    if (joueur == tableauJouer[0, 1] && joueur == tableauJouer[1, 1] && joueur == tableauJouer[2, 1])
                     {
                         return true;
                     }
-                    if (joueur == tableauGagnant[0, 2] + tableauGagnant[1, 2] + tableauGagnant[2, 2])
+                    if (joueur == tableauJouer[0, 2] && joueur == tableauJouer[1, 2] && joueur == tableauJouer[2, 2])
                     {
                         return true;
                     }
-                    if (joueur == tableauGagnant[1, 0] + tableauGagnant[1, 1] + tableauGagnant[1, 2])
+                    if (joueur == tableauJouer[1, 0] && joueur == tableauJouer[1, 1] && joueur == tableauJouer[1, 2])
                     {
                         return true;
                     }
-                    if (joueur == tableauGagnant[2, 0] + tableauGagnant[2, 1] + tableauGagnant[2, 2])
+                    if (joueur == tableauJouer[2, 0] && joueur == tableauJouer[2, 1] && joueur == tableauJouer[2, 2])
                     {
                         return true;
                     }
-                    if (joueur == tableauGagnant[0,0] + tableauGagnant[1,1] + tableauGagnant[2,2])
+                    if (joueur == tableauJouer[0,0] && joueur == tableauJouer[1,1] && joueur == tableauJouer[2,2])
                     {
                         return true;
                     }
-                    if (joueur == tableauGagnant[0,2] + tableauGagnant[1,1] + tableauGagnant[2,0])
+                    if (joueur == tableauJouer[0,2] && joueur == tableauJouer[1,1] && joueur == tableauJouer[2,0])
                     {
                         return true;
                     }

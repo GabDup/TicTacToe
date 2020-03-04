@@ -25,13 +25,13 @@ namespace TicTacToe
             int colonne = int.Parse(button.Name.Substring(4, 1));
             button.Text = tourJoueur.joueur;
             tourJoueur.jouer(ligne, colonne);
-            tourJoueur.changerTour();
             button.Enabled = false;
-            if (tourJoueur.gagnant() == true)
+            if (tourJoueur.trouverJoueurGagnant() == true)
             {
                 MessageBox.Show(tourJoueur.joueur + " gagne");
                 
             }
+            tourJoueur.changerTour();
         }
         private void TicTacToe_KeyPress(object sender, KeyPressEventArgs e)
         {
