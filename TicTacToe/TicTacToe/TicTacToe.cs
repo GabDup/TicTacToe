@@ -44,6 +44,30 @@ namespace TicTacToe
 
         private void TicTacToe_Load(object sender, EventArgs e)
         {
+            grbtictactoe4x4.Visible = false;
+            grbTicTacToe3x3.Visible = true;
+        }
+
+        private void Btn4x4_Click(object sender, EventArgs e)
+        {
+            if (grbtictactoe4x4.Visible == false)
+            {
+                grbtictactoe4x4.Visible = true;
+                grbTicTacToe3x3.Visible = false;
+            }
+        }
+
+        private void Btn3x3_Click(object sender, EventArgs e)
+        {
+            if (grbTicTacToe3x3.Visible == false)
+            {
+                grbTicTacToe3x3.Visible = true;
+                grbtictactoe4x4.Visible = false;
+            }
+        }
+
+        private void Grbtictactoe4x4_VisibleChanged(object sender, EventArgs e)
+        {
 
         }
     }
